@@ -26,7 +26,7 @@ public class Stats
         if (!Path.Exists(statsFilePath))
         {
 
-            File.Create(statsFilePath);
+            //File.Create(statsFilePath);
 
             using (StreamWriter sw = new StreamWriter(StatsFilePath))
             {
@@ -79,7 +79,7 @@ public class Stats
 
     }
 
-    public void AddScore()
+    public IResult AddScore()
     {
 
         Clicks++;
@@ -97,15 +97,23 @@ public class Stats
 
         File.WriteAllLines(statsFilePath, stats);
 
+        return Results.Ok(new DTO_PlayerStats_Return(stats[0], stats[1], stats[2], stats[3]));
+
     }
 
-    public void AutoclickUpgrade()
+    public IResult AutoclickUpgrade()
     {
 
-        if (Autoclick_lvl <= 3)
+        if (Autoclick_lvl >= 3)
         {
 
-            return;
+            return Results.Problem(
+
+                detail: "Already max. level",
+                title: "Upgrade limit",
+                statusCode: 400
+
+            );
 
         }
 
@@ -118,15 +126,23 @@ public class Stats
         stats[2] = string.Join('-', autoclicker_stat);
         File.WriteAllLines(statsFilePath, stats);
 
+        return Results.Ok(new DTO_PlayerStats_Return(stats[0], stats[1], stats[2], stats[3]));
+
     }
 
-    public void MultiplierUpgrade()
+    public IResult MultiplierUpgrade()
     {
 
-        if (Multiplier_lvl <= 3)
+        if (Multiplier_lvl >= 3)
         {
 
-            return;
+            return Results.Problem(
+
+                detail: "Already max. level",
+                title: "Upgrade limit",
+                statusCode: 400
+
+            );
 
         }
 
@@ -139,8 +155,16 @@ public class Stats
         stats[3] = string.Join('-', multiplier_Stat);
         File.WriteAllLines(statsFilePath, stats);
 
+        return Results.Ok(new DTO_PlayerStats_Return(stats[0], stats[1], stats[2], stats[3]));
+
     }
 
-    //
+    public IResult GetStats()
+    {
+
+        return Results.Ok(new DTO_PlayerStats_Return(Convert.ToString(Clicks), Convert.ToString(Money),
+        Convert.ToString(Multiplier_lvl), Convert.ToString(Autoclick_lvl)));
+
+    }
     
 }

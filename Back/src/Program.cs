@@ -15,7 +15,11 @@ public class Program
         app.UseSwagger();
         app.UseSwaggerUI();
 
-        app.MapGet("/", () => "");
+        //app.MapGet("/", () => "");
+        app.MapGet("/Stats", () => stats.GetStats());
+        app.MapPost("/Click", () => stats.AddScore());
+        app.MapPost("/Upgrades/Autoclick", () => stats.AutoclickUpgrade());
+        app.MapPost("/Upgrades/Multiplier", () => stats.MultiplierUpgrade());
 
 
         stats.CreateFile();
