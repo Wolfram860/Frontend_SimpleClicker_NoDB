@@ -26,3 +26,11 @@ C:\MainFolder\Projects\SimpleClicker_NoDB\back\obj\Debug\net10.0\refint\back.dll
 C:\MainFolder\Projects\SimpleClicker_NoDB\back\obj\Debug\net10.0\back.pdb
 C:\MainFolder\Projects\SimpleClicker_NoDB\back\obj\Debug\net10.0\back.genruntimeconfig.cache
 C:\MainFolder\Projects\SimpleClicker_NoDB\back\obj\Debug\net10.0\ref\back.dll
+C:\MainFolder\Projects\SimpleClicker_NoDB\back\bin\Debug\net10.0\Microsoft.OpenApi.dll
+C:\MainFolder\Projects\SimpleClicker_NoDB\back\bin\Debug\net10.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\MainFolder\Projects\SimpleClicker_NoDB\back\bin\Debug\net10.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\MainFolder\Projects\SimpleClicker_NoDB\back\bin\Debug\net10.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\MainFolder\Projects\SimpleClicker_NoDB\back\obj\Debug\net10.0\back.csproj.AssemblyReference.cache
+C:\MainFolder\Projects\SimpleClicker_NoDB\back\obj\Debug\net10.0\back.MvcApplicationPartsAssemblyInfo.cs
+C:\MainFolder\Projects\SimpleClicker_NoDB\back\obj\Debug\net10.0\back.sourcelink.json
+C:\MainFolder\Projects\SimpleClicker_NoDB\back\obj\Debug\net10.0\back.csproj.Up2Date

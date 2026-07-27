@@ -1,3 +1,5 @@
+using Microsoft.Extensions.Options;
+
 namespace back.src;
 
 public class Program
@@ -10,7 +12,21 @@ public class Program
         builder.Services.AddEndpointsApiExplorer();
         builder.Services.AddSwaggerGen();
 
+        //CORS
+
+        builder.Services.AddCors(options =>
+        {
+
+            options.AddPolicy("AllowFrontend", policy =>
+                policy.WithOrigins("http://localhost:5173")
+                    .AllowAnyHeader().AllowAnyMethod());
+
+        });
+
+        //CORS end
+
         var app = builder.Build();
+        app.UseCors("AllowFrontend");
 
         app.UseSwagger();
         app.UseSwaggerUI();

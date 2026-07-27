@@ -97,7 +97,12 @@ public class Stats
 
         File.WriteAllLines(statsFilePath, stats);
 
-        return Results.Ok(new DTO_PlayerStats_Return(stats[0], stats[1], stats[2], stats[3]));
+        return Results.Ok(new DTO_PlayerStats_Return(
+            Clicks_Stat[1],
+            Money_Stat[1],
+            stats[2].Split('-')[1],
+            stats[3].Split('-')[1]
+        ));
 
     }
 
@@ -126,7 +131,12 @@ public class Stats
         stats[2] = string.Join('-', autoclicker_stat);
         File.WriteAllLines(statsFilePath, stats);
 
-        return Results.Ok(new DTO_PlayerStats_Return(stats[0], stats[1], stats[2], stats[3]));
+        return Results.Ok(new DTO_PlayerStats_Return(
+            stats[0].Split('-')[1],
+            stats[1].Split('-')[1],
+            stats[2].Split('-')[1],
+            stats[3].Split('-')[1]
+        ));
 
     }
 
@@ -155,7 +165,12 @@ public class Stats
         stats[3] = string.Join('-', multiplier_Stat);
         File.WriteAllLines(statsFilePath, stats);
 
-        return Results.Ok(new DTO_PlayerStats_Return(stats[0], stats[1], stats[2], stats[3]));
+        return Results.Ok(new DTO_PlayerStats_Return(
+            stats[0].Split('-')[1],
+            stats[1].Split('-')[1],
+            stats[2].Split('-')[1],
+            stats[3].Split('-')[1]
+        ));
 
     }
 

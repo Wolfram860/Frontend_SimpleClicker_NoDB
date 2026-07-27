@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\MainFolder\\Projects\\SimpleClicker_NoDB\\Back\\back.csproj": {}
+    "C:\\MainFolder\\Projects\\SimpleClicker_NoDB\\back\\back.csproj": {}
   },
   "projects": {
-    "C:\\MainFolder\\Projects\\SimpleClicker_NoDB\\Back\\back.csproj": {
+    "C:\\MainFolder\\Projects\\SimpleClicker_NoDB\\back\\back.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\MainFolder\\Projects\\SimpleClicker_NoDB\\Back\\back.csproj",
+        "projectUniqueName": "C:\\MainFolder\\Projects\\SimpleClicker_NoDB\\back\\back.csproj",
         "projectName": "back",
-        "projectPath": "C:\\MainFolder\\Projects\\SimpleClicker_NoDB\\Back\\back.csproj",
+        "projectPath": "C:\\MainFolder\\Projects\\SimpleClicker_NoDB\\back\\back.csproj",
         "packagesPath": "C:\\Users\\vesha\\.nuget\\packages\\",
-        "outputPath": "C:\\MainFolder\\Projects\\SimpleClicker_NoDB\\Back\\obj\\",
+        "outputPath": "C:\\MainFolder\\Projects\\SimpleClicker_NoDB\\back\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\vesha\\AppData\\Roaming\\NuGet\\NuGet.Config",
