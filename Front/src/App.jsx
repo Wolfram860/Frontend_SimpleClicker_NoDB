@@ -11,6 +11,7 @@ export default function App() {
   const upgraderCost = multiplier * 10;
   const clickReward = multiplier;
   const interval = 2000 / (2 ** (autoLevel - 1));
+  const autoUpgradeCost = autoLevel * 20;
  
     // здесь функция клика
   function handleClick() {
@@ -29,8 +30,9 @@ export default function App() {
     setAutoClick(a => !a);
   }
 
-  function handleAutoLevelUp() {
-    if(autoLevel < 3) {
+  function autoUpgrade() {
+    if(autoLevel < 3 && money >= autoUpgradeCost) {
+      setMoney(m => m - autoUpgradeCost)
       setAutoLevel(a => a + 1);
     }
   }
@@ -72,7 +74,10 @@ export default function App() {
         </label>
         <br />
 
-        <button onClick={handleUpgrade}>
+        <button 
+        onClick={handleUpgrade}
+        disabled={money < upgraderCost}
+        >
           Upgrade: {upgraderCost}
         </button>
         <br />
@@ -82,7 +87,10 @@ export default function App() {
         </button>
         <br />
 
-        <button onClick={handleAutoLevelUp}>
+        <button 
+        onClick={autoUpgrade}
+        disabled={money < autoUpgradeCost || autoLevel >= 3 }
+        >
           AutoClickerLevelUp: {autoLevel}
         </button>
         <br />
